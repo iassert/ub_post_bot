@@ -1,0 +1,13 @@
+[Unit]
+Description=ub_post_bot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/ub_post_bot/
+ExecStart=python3.10 /root/ub_post_bot/__main__.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
